@@ -5,6 +5,6 @@ get '/' do
 	"Caeser Two"
 end
 
-get '/home'
+get '/home' do
 	"This is the home page evidently"
 end

@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
-
+str = ''
+n = 0
 
 def caeser(str, n)
   arr = str.split("")
@@ -23,7 +24,10 @@ get '/' do
 
 	str = params[:phrase]
 	n = params[:num]
-	cipher_str = caeser(str, n)
+	
+	unless str == nil || str == nil
+		cipher_str = caeser(str, n)
+	end
 
 	erb :index, :locals => {:cipher_str => cipher_str}
 	
